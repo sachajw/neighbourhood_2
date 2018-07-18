@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Deep South</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <button class="hamburger">&#9776;</button>
+        <button class="close">&#735;</button>
+        <h2>Welcome to Sacha's Hood</h2>
+    </header>
+    <div class="menu">
+        <h2>Noordhoek Hangouts</h2>
+        <hr>
+        <p>Let's go to
+            <input class="filter" type="search" placeholder="Search" data-bind="textInput: userInput, event: {keyup: filterMarkers}">
+        </p>
+        <hr>
+        <div data-bind="foreach: visible">
+            <p>
+                <a href="#" data-bind="text: title, click: $parent.popInfoWindow"></a>
+            </p>
+            <hr>
+        </div>
+    </div>
+    <div id="map"></div>
+
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/knockout.js"></script>
+
+    <script src="js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClY8hHYN7hrfPgfdbKchvoyISLJrgOZ4g&callback=initMap"></script>
+
+</body>
+
+</html>
